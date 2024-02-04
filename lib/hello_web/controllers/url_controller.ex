@@ -15,15 +15,10 @@ defmodule HelloWeb.URLController do
   end
 
   def create(conn, %{"url" => url_params}) do
-    case Shortener.create_url(url_params) do
-      {:ok, url} ->
-        conn
-        |> put_flash(:info, "Url created successfully.")
-        |> redirect(to: ~p"/url/#{url}")
-
-      {:error, %Ecto.Changeset{} = changeset} ->
-        render(conn, :new, changeset: changeset)
-    end
+    Phoenix.PubSub.broadcast(Hello.PubSub, "register", {:url, url_params})
+    conn
+    |> put_flash(:info, "Request submit done.")
+    |> redirect(to: "/url")
   end
 
   def show(conn, %{"id" => id}) do
