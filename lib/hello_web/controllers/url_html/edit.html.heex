@@ -1,0 +1,8 @@
+<.header>
+  Edit Url <%= @url.id %>
+  <:subtitle>Use this form to manage url records in your database.</:subtitle>
+</.header>
+
+<.url_form changeset={@changeset} action={~p"/url/#{@url}"} />
+
+<.back navigate={~p"/url"}>Back to url</.back>
