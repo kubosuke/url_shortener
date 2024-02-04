@@ -8,7 +8,14 @@
 </.header>
 
 <.table id="url" rows={@url_collection} row_click={&JS.navigate(~p"/url/#{&1}")}>
-  <:col :let={url} label="Url"><%= url.url %></:col>
+  <:col :let={url} label="Url">
+    <%= url.url %>
+  </:col>
+  <:col :let={url} label="Url">
+    <a href={"/goto/#{url.hash}"}>
+      <%= url.hash %>
+    </a>
+  </:col>
   <:action :let={url}>
     <div class="sr-only">
       <.link navigate={~p"/url/#{url}"}>Show</.link>

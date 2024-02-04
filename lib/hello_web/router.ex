@@ -25,13 +25,12 @@ defmodule HelloWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+    get "/goto/:hash", RedirectController, :index
 
     scope "/url" do
       pipe_through :admin
       resources "/", URLController
     end
-
-    get "/goto/:hash", RedirectController, :index
   end
 
   # Other scopes may use custom stacks.

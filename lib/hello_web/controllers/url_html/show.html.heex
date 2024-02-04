@@ -1,15 +1,22 @@
 <.header>
   Url <%= @url.id %>
-  <:subtitle>This is a url record from your database.</:subtitle>
-  <:actions>
-    <.link href={~p"/url/#{@url}/edit"}>
-      <.button>Edit url</.button>
-    </.link>
-  </:actions>
+    <:subtitle>This is a url record from your database.</:subtitle>
+    <:actions>
+      <.link href={~p"/url/#{@url}/edit"}>
+        <.button>Edit url</.button>
+      </.link>
+    </:actions>
 </.header>
 
 <.list>
-  <:item title="Url"><%= @url.url %></:item>
+  <:item title="Url">
+    <%= @url.url %>
+  </:item>
+  <:item title="Hash">
+    <a href={"/goto/#{@url.hash}"}>
+      <%= @url.hash %>
+    </a>
+  </:item>
 </.list>
 
 <.back navigate={~p"/url"}>Back to url</.back>
