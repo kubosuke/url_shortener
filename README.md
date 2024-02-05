@@ -21,3 +21,8 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
 
 https://hexdocs.pm/ecto_sql/Ecto.Migration.html
 
+# How to deploy
+
+```
+fly launch
+```
