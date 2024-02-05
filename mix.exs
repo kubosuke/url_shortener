@@ -60,7 +60,8 @@ defmodule Hello.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.2"},
       {:shortuuid, "~> 3.0"},
-      { :uuid, "~> 1.1" }
+      { :uuid, "~> 1.1" },
+      {:logger_json, "~> 5.1"}
     ]
   end
 
