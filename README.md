@@ -26,3 +26,7 @@ https://hexdocs.pm/ecto_sql/Ecto.Migration.html
 ```
 fly launch
 ```
+
+# Dashboard
+
+https://fly-metrics.net/d/fly-app/fly-app?orgId=491457&var-app=url-shortener-kubosuke
