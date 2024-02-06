@@ -1,0 +1,12 @@
+<.header>
+    VisitHistory
+</.header>
+
+<.table id="visit_history" rows={@visit_histories}>
+    <:col :let={visit_history} label="Name">
+        <%= visit_history.name %>
+    </:col>
+    <:col :let={visit_history} label="Num of access">
+        <%= visit_history.score %>
+    </:col>
+</.table>

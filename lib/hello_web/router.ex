@@ -27,6 +27,8 @@ defmodule HelloWeb.Router do
     get "/", PageController, :home
     get "/goto/:hash", RedirectController, :index
 
+    get "/history", VisitHistoryController, :index
+
     scope "/url" do
       pipe_through :admin
       resources "/", URLController

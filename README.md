@@ -17,11 +17,7 @@ Ready to run in production? Please [check our deployment guides](https://hexdocs
   * Forum: https://elixirforum.com/c/phoenix-forum
   * Source: https://github.com/phoenixframework/phoenix
 
-# How to update database scheme
-
-https://hexdocs.pm/ecto_sql/Ecto.Migration.html
-
-# How to deploy
+# Deploy
 
 ```
 fly launch
