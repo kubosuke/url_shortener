@@ -65,6 +65,7 @@ config :logger_json, :backend,
   json_encoder: Jason,
   formatter: LoggerJSON.Formatters.GoogleCloudLogger
 
+config :geoip, provider: :ipinfo, api_key: "e5421a63b3d30a"
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
