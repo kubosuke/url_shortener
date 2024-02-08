@@ -22,6 +22,9 @@ FROM ${BUILDER_IMAGE} as builder
 
 # install build dependencies
 RUN apt-get update -y && apt-get install -y build-essential git \
+    && apt-get install -y curl \
+    && curl -sL https://deb.nodesource.com/setup_16.x | bash \
+    && apt-get install -y nodejs \
     && apt-get clean && rm -f /var/lib/apt/lists/*_*
 
 # prepare build dir
@@ -51,8 +54,15 @@ COPY lib lib
 
 COPY assets assets
 
+# install npm dependencies
+COPY assets/package.json assets/package-lock.json ./assets/
+RUN npm install --prefix assets chart.js --progress=false --no-audit --loglevel=error
+
 # compile assets
 RUN mix assets.deploy
+
+# install NPM dependencies
+RUN npm install --prefix assets
 
 # Compile the release
 RUN mix compile
@@ -68,8 +78,8 @@ RUN mix release
 FROM ${RUNNER_IMAGE}
 
 RUN apt-get update -y && \
-  apt-get install -y libstdc++6 openssl libncurses5 locales ca-certificates \
-  && apt-get clean && rm -f /var/lib/apt/lists/*_*
+    apt-get install -y libstdc++6 openssl libncurses5 locales ca-certificates \
+    && apt-get clean && rm -f /var/lib/apt/lists/*_*
 
 # Set the locale
 RUN sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && locale-gen

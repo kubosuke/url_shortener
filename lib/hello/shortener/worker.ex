@@ -1,4 +1,4 @@
-defmodule Hello.Worker do
+defmodule Hello.Shortener.Worker do
   use GenServer
 
   require Logger
