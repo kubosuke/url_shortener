@@ -17,6 +17,11 @@
     </a>
   </:col>
   <:action :let={url}>
+    <.link href={~s"/url/dashboard/#{url.hash}"} method="get">
+      dashboard
+    </.link>
+  </:action>
+  <:action :let={url}>
     <div class="sr-only">
       <.link navigate={~p"/url/#{url}"}>Show</.link>
     </div>

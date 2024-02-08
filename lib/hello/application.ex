@@ -12,7 +12,8 @@ defmodule Hello.Application do
       Hello.Repo,
       {DNSCluster, query: Application.get_env(:hello, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: Hello.PubSub},
-      Hello.Worker,
+      Hello.Shortener.Worker,
+      Hello.Visit.Worker,
       # Start the Finch HTTP client for sending emails
       {Finch, name: Hello.Finch},
       # Start a worker by calling: Hello.Worker.start_link(arg)
