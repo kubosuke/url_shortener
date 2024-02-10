@@ -24,3 +24,4 @@
 - Apply appropriate session expiry
 - Use strond hash algorithm for the password
 - Don't hard code cookie sault (hardcoded by default: https://github.com/kubosuke/url_shortener/blob/809add8ad6e2f2eb71d4ed46a658381c061a7d17/lib/hello_web/endpoint.ex#L10 )
+- Apply secure attribute to session cookie (https://elixirforum.com/t/how-to-instruct-phoenix-to-set-secure-flag-https-only-on-session-cookie/14292)
