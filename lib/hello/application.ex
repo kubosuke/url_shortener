@@ -20,7 +20,12 @@ defmodule Hello.Application do
       # {Hello.Worker, arg},
       # Start to serve requests, typically the last entry
       HelloWeb.Endpoint,
-      {Redix, host: "redis-14973.c299.asia-northeast1-1.gce.cloud.redislabs.com", port: 14973, name: :redix, password: "wAG4WXb3F9fuoaHWApztngjTxLeh9VYb", username: "default"}
+      {Redix,
+       host: "redis-14973.c299.asia-northeast1-1.gce.cloud.redislabs.com",
+       port: 14973,
+       name: :redix,
+       password: "wAG4WXb3F9fuoaHWApztngjTxLeh9VYb",
+       username: "default"}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

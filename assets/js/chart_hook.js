@@ -1,28 +1,10 @@
 import Chart from 'chart.js/auto';
 
-// const labels = [ 
-//     'January',
-//     'February',
-//     'March',
-//     'April',
-//     'May',
-//     'June',
-// ];
-
 const labels = ['NorthAmerica', 'Antarctica', 'Asia', 'Oceania', 'Europe', 'Africa', 'SouthAmerica', 'Unknown']
-// const data = {
-//     labels: labels,
-//     datasets: [{
-//         label: 'My First dataset',
-//         backgroundColor: 'rgb(255, 99, 132)',
-//         borderColor: 'rgb(255, 99, 132)',
-//         data: [0, 10, 5, 2, 20, 30, 45],
-//     }]
-// };
 const data = {
     labels: labels,
     datasets: [{
-        label: 'My First Dataset',
+        label: 'Access Region',
         data: [0, 0, 0, 0, 0, 0, 0],
         backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
@@ -46,11 +28,6 @@ const data = {
     }]
 };
 
-// const config = {
-//     type: 'line',
-//     data: data,
-//     options: {}
-// };
 const config = {
     type: 'bar',
     data: data,

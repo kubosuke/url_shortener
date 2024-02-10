@@ -15,7 +15,6 @@ release_command = '/app/bin/migrate'
 [env]
 PHX_HOST = 'url-shortener-kubosuke.fly.dev'
 PORT = '8080'
-REDIS_URL = "default:2e1d907b4a8c4c2cbd9b368bc72552bb@fly-winter-lake-3808.upstash.io"
 
 [http_service]
 internal_port = 8080
