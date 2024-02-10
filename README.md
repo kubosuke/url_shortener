@@ -4,7 +4,9 @@ URL Shortener demo app
 
 ## Demo
 
-[Here](Demo.md)
+https://url-shortener-kubosuke.fly.dev/
+
+Or you can check capture from [Here](Demo.md)
 
 ## Entire architecture
 
