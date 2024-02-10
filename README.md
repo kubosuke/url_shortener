@@ -2,6 +2,12 @@
 
 URL Shortener demo app
 
+## Demo
+
+[Here](Demo.md)
+
+## Entire architecture
+
 ![alt text](<url_shortener-Entire architecture.jpg>)
 
 ## Prerequired
