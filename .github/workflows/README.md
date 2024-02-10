@@ -11,6 +11,16 @@
 
 push to `main` branch
 
+## Prerequires
+
+* Store FLY_API_TOKEN in GitHub secret
+
+You can obtain api key by running this cmd:
+
+```sh
+fly tokens create deploy -x 999999h # Shorter is better in terms of security
+```
+
 ## How does it work
 
 1. Setup Elixir
@@ -21,11 +31,3 @@ push to `main` branch
 6. Run test
 
 => If the test passed, deploy to https://url-shortener-kubosuke.fly.dev/
-
-## How to update fly.io deploy token
-
-```sh
-fly tokens create deploy -x 999999h # Shorter is better in terms of security
-```
-
-Update secret in https://github.com/kubosuke/url_shortener/settings/secrets/actions
