@@ -13,10 +13,7 @@ defmodule Hello.Shortener.Worker do
   def init(opts) do
     name = opts[:name]
 
-    case PubSub.subscribe(Hello.PubSub, "register") do
-      :ok -> Logger.info("🎉 Subsc OK")
-      _error -> Logger.info("💥 Subsc NOT OK")
-    end
+    PubSub.subscribe(Hello.PubSub, "register")
     {:ok, %{name: name}}
   end
 

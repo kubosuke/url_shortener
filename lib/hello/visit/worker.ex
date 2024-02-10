@@ -270,9 +270,7 @@ defmodule Hello.Visit.Worker do
   def init(opts) do
     name = opts[:name]
 
-    case PubSub.subscribe(Hello.PubSub, "visit") do
-      :ok -> Logger.info("🎉 Fuwachan OK")
-      _error -> Logger.info("💥 Subsc NOT OK")
+    PubSub.subscribe(Hello.PubSub, "visit")
     end
 
     {:ok, %{name: name}}
