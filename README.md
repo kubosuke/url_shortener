@@ -8,7 +8,7 @@ URL Shortener demo app
 
 ## Entire architecture
 
-![alt text](<url_shortener-Entire architecture.jpg>)
+![alt text](<docs_assets/url_shortener-Entire architecture.jpg>)
 
 ## Prerequired
 
