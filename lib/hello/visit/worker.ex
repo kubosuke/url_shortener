@@ -271,8 +271,6 @@ defmodule Hello.Visit.Worker do
     name = opts[:name]
 
     PubSub.subscribe(Hello.PubSub, "visit")
-    end
-
     {:ok, %{name: name}}
   end
 

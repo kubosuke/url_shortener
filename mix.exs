@@ -64,8 +64,7 @@ defmodule Hello.MixProject do
       {:logger_json, "~> 5.1"},
       {:redix, "~> 1.1"},
       {:castore, ">= 0.0.0"},
-      {:geoip, "~> 0.2"},
-      {:ua_inspector, "~> 3.0"}
+      {:geoip, "~> 0.2"}
     ]
   end
 
