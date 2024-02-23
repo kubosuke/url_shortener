@@ -16,3 +16,17 @@
 ## Live dashboard
 
 ![alt text](docs_assets/live_dashboard.gif)
+
+# Logic drawings
+
+## GET /goto/
+
+![alt text](docs_assets/goto.jpg)
+
+## POST /url/
+
+![alt text](docs_assets/post_url.jpg)
+
+## GET /dashboard/${hash}
+
+![alt text](docs_assets/dashboard_hash.jpg)
